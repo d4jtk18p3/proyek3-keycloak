@@ -1,8 +1,13 @@
 .login-pf body {
-    background: #ffffff;
+    background: #272343;
     background-size: cover;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 /*IE compatibility*/
 .pf-c-form-control {
@@ -469,6 +474,34 @@ ul#kc-totp-supported-apps {
     border-color: transparent black transparent transparent;
 }
 
+.card-title-container{
+    background:#F0F0F0;
+    max-width: 500px;
+    padding: 15px 35px;
+    margin: -45px -40px 0px -40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.card-title{
+    color: #272343;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.title-logo{
+    width: 35px;
+    height: 35px;
+    background-image: url('../img/polban-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+}
+
+
 @media (min-width: 768px) {
     #kc-container-wrapper {
         position: absolute;
@@ -488,9 +521,6 @@ ul#kc-totp-supported-apps {
 
 @media (max-width: 767px) {
 
-    .login-pf body {
-        background: white;
-    }
 
     #kc-header {
         padding-left: 15px;
@@ -503,7 +533,7 @@ ul#kc-totp-supported-apps {
         font-size: 16px;
         font-weight: bold;
         padding: 0px;
-      
+
         color: #272343;
         letter-spacing: 0;
     }
@@ -544,6 +574,13 @@ ul#kc-totp-supported-apps {
         width: 100px;
         margin: 20px 0 0 20px;
     }
+
+    .card-title-container{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+
 
 }
 
@@ -644,7 +681,7 @@ ul#kc-totp-supported-apps {
 }
 
 .card-pf {
-    margin: 0 auto;
+    margin-top: 0;
     box-shadow: var(--pf-global--BoxShadow--lg);
     padding: 0 30px;
     max-width: 500px;
@@ -652,15 +689,14 @@ ul#kc-totp-supported-apps {
 
 /*phone*/
 @media (max-width: 767px) {
-    .login-pf-page .card-pf {
+    /* .login-pf-page .card-pf {
         max-width: none;
         margin-left: 0;
         margin-right: 0;
         padding-top: 0;
         border-top: 0;
         box-shadow: 0 0;
-    }
-
+    } */
     .kc-social-grid {
         grid-column-end: 12;
         --pf-l-grid__item--GridColumnEnd: span 12;
@@ -723,12 +759,15 @@ ul#kc-totp-supported-apps {
   font-weight: bold;
 }
 
-.login-pf-page .card-pf{
+/* .login-pf-page .card-pf{
   padding: 20px 40px 30px 40px;
-}
+} */
 
 .login-pf-page{
-  background: white;
+  background: #272343;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -748,15 +787,15 @@ ul#kc-totp-supported-apps {
 
 
 .pf-c-form-control:hover{
-    border-bottom-color: #59DCDC;
+    border-bottom-color: #272343;
 }
 
 .pf-c-form-control:focus{
-    border-bottom-color: #59DCDC;
+    border-bottom-color: #272343;
 }
 
 .pf-c-form-control:active{
-    border-bottom-color: #59DCDC;
+    border-bottom-color: #272343;
 }
 
 .pf-c-button.pf-m-primary {
@@ -776,6 +815,23 @@ input[type="text"], input[type="password"], input[type="submit"], textarea, sele
 .btn-lg::hover{
  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
+
+
+@media (max-width: 320px) {
+
+
+    .login-pf body{
+        background: #272343;
+    }
+    
+}
+
+.login-pf{
+    background: #272343;
+}
+
+
+
 
 
 

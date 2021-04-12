@@ -12,8 +12,8 @@
             <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}"/>
         </#list>
     </#if>
-    <title>${msg("loginTitle",(realm.displayName!''))}</title>
-    <link rel="icon" href="${url.resourcesPath}/img/favicon.ico" />
+    <title>Masuk - Politeknik Negeri Bandung </title>
+    <link rel="icon"  href="${url.resourcesPath}/img/polban-logo.ico" />
     <#if properties.stylesCommon?has_content>
         <#list properties.stylesCommon?split(' ') as style>
             <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet" />
@@ -38,11 +38,11 @@
 
 <body class="${properties.kcBodyClass!}">
 <div class="${properties.kcLoginClass!}">
-    <div id="kc-header" class="${properties.kcHeaderClass!}">
-        <div id="kc-header-wrapper"
-             class="${properties.kcHeaderWrapperClass!}">${client.name}</div>
-    </div>
-    <div class="${properties.kcFormCardClass!}">
+     <div class="${properties.kcFormCardClass!}">
+         <div class="card-title-container">
+            <div class="title-logo" alt="Logo polban"></div>
+             <h4 class="card-title">Politeknik Negeri Bandung</h4>
+        </div>
         <header class="${properties.kcFormHeaderClass!}">
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
                 <div id="kc-locale">
@@ -142,6 +142,7 @@
           </#if>
         </div>
       </div>
+            </div>
 
     </div>
   </div>
