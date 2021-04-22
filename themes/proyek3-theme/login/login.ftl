@@ -89,8 +89,8 @@
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
             <div id="kc-registration-container">
                 <div id="kc-registration">
-                    <span>${msg("noAccount")} <a tabindex="6"
-                                                 href="${url.registrationUrl}">${msg("doRegister")}</a></span>
+                    <span>Lupa password?<a tabindex="6"
+                                                   href="http://localhost:5002/auth/forget-password">Klik disini</a></span>
                 </div>
             </div>
         </#if>
