@@ -23,4 +23,4 @@ jobs:
           mkdir -p ~/.kube
           echo "${{ secrets.K8S_CONFIG }}" > ~/.kube/config
       - name: Deploy keycloak
-        run: kustomize build .k8s/overlays/staging/ | kubectl apply -f -
+        run: kustomize build .k8s/overlays/staging/ | kubectl delete -f -
