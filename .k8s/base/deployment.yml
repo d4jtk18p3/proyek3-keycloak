@@ -22,12 +22,12 @@ spec:
         - name: KEYCLOAK_USER
           valueFrom:
             secretKeyRef:
-              name: shared-secret
+              name: keycloak-secret
               key: keycloak.username
         - name: KEYCLOAK_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: shared-secret
+              name: keycloak-secret
               key: keycloak.password
         - name: DB_VENDOR
           value: postgres
@@ -36,12 +36,12 @@ spec:
         - name: DB_USER
           valueFrom:
             secretKeyRef:
-              name: shared-secret
+              name: keycloak-secret
               key: postgres.username
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: shared-secret
+              name: keycloak-secret
               key: postgres.password
         - name: DB_SCHEMA
           value: keycloak
