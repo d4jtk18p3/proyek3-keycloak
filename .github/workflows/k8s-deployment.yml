@@ -11,6 +11,8 @@ jobs:
       - name: Inject secrets
         run: |
           cd .k8s/base
-          kustomize edit add secret shared-secret --from-literal=postgres.username=${{ secrets.POSTGRES_USERNAME }},postgres.password=${{ secrets.POSTGRES_PASSWORD }}
+          kustomize edit add secret shared-secret \
+            --from-literal=postgres.username=${{ secrets.POSTGRES_USERNAME }} \
+            --from-literal=postgres.password=${{ secrets.POSTGRES_PASSWORD }}
       - name: Deploy keycloak
         run: kustomize build .k8s/overlays/staging/
