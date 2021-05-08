@@ -1,8 +1,8 @@
 name: k8sdeployment
-
 on:
   workflow_dispatch:
-
+env:
+  K8S_NAMESPACE: proyek3-staging
 jobs:
   deployment:
     environment:
@@ -19,4 +19,4 @@ jobs:
             --from-literal=postgres.username=${{ secrets.POSTGRES_USERNAME }} \
             --from-literal=postgres.password=${{ secrets.POSTGRES_PASSWORD }}
       - name: Deploy keycloak
-        run: kustomize build .k8s/overlays/staging/
+        run: kustomize build .k8s/overlays/staging/ | kubectl apply -f -
