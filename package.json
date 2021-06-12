@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "setup": "node .scripts/setup.js"
+    "setup": "node .scripts/setup.js",
+    "serve:development": "npm run setup && ./bin/standalone.sh -Djboss.http.port=14417"
   },
   "devDependencies": {
     "axios": "^0.21.1",
